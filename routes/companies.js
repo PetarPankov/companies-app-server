@@ -1,12 +1,12 @@
 const { Companies } = require('../models');
 
 module.exports = app => {
-    app.get("/companies", async (req, res) => {
-    const movies = await Companies.findAll();
-    if (!movies.length) {
+    app.get("/get-companies", async (req, res) => {
+    const companies = await Companies.findAll();
+    if (!companies.length) {
       res.status(204).send();
     } else {
-      res.send(movies);
+      res.send(companies);
     }
   });
 };
