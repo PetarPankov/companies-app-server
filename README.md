@@ -1,1 +1,1 @@
-# api for movie news tab extension
+# api for companies app

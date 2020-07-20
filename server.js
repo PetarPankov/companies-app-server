@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cookieParser = require('cookie-parser');
 
-const compression = require("compression");\
+const compression = require("compression");
 
 const cors = require('cors');
 
