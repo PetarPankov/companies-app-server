@@ -4,9 +4,9 @@ module.exports = app => {
     app.get("/get-projects", async (req, res) => {
         const projects = await Projects.findAll();
         if (!projects.length) {
-            res.status(204).send();
+            res.end([]);
         } else {
-            res.send({ status: 'success', data: projects });
+            res.send(projects);
         }
     });
 
@@ -14,14 +14,9 @@ module.exports = app => {
         const { id } = req.query;
         const projects = await Projects.findAll({ where: { companyId: id } });
         if (!projects.length) {
-            res.send({
-                status: 'error',
-                data: {
-                    errorText: 'No projects found'
-                }
-            });
+            res.send([]);
         } else {
-            res.send({ status: 'success', data: projects });
+            res.send(projects);
         }
     });
 };
