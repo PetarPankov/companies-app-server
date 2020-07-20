@@ -5,7 +5,7 @@ const Employees = db.define('employees', {
   id: {
     autoIncrement: true,
     primaryKey: true,
-    type: Sequelize.STRING,
+    type: Sequelize.STRING
   },
   firstName: {
     type: Sequelize.STRING,

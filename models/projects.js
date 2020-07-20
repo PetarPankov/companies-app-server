@@ -16,7 +16,7 @@ const Projects = db.define('projects', {
     allowNull: false
   },
   employeesId: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     allowNull: false
   },
   companyId: {
