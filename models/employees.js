@@ -3,7 +3,6 @@ const db = require('../config/database');
 
 const Employees = db.define('employees', {
   id: {
-    autoIncrement: true,
     primaryKey: true,
     type: Sequelize.STRING
   },

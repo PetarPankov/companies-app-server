@@ -4,7 +4,6 @@ const db = require("../config/database");
 const Companies = db.define("companies", {
   id: {
     type: Sequelize.STRING,
-    autoIncrement: true,
     primaryKey: true
   },
   name: {

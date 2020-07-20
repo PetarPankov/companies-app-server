@@ -4,7 +4,6 @@ const db = require("../config/database");
 const CompanyAddresses = db.define("company-addresses", {
   id: {
     type: Sequelize.STRING,
-    autoIncrement: true,
     primaryKey: true
   },
   city: {

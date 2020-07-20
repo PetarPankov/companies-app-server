@@ -4,8 +4,7 @@ const db = require('../config/database');
 const Projects = db.define('projects', {
   id: {
     type: Sequelize.STRING,
-    primaryKey: true,
-    autoIncrement: true
+    primaryKey: true
   },
   name: {
     type: Sequelize.STRING,
