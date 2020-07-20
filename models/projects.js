@@ -21,6 +21,8 @@ const Projects = db.define('projects', {
   companyId: {
     type: Sequelize.STRING
   }  
+}, {
+    timestamps: false
 });
 
 module.exports = Projects;

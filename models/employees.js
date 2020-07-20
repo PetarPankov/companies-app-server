@@ -26,6 +26,8 @@ const Employees = db.define('employees', {
   jobType: {
     type: Sequelize.STRING
   }
+}, {
+    timestamps: false
 });
 
 module.exports = Employees;

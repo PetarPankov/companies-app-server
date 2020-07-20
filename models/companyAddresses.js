@@ -21,6 +21,8 @@ const CompanyAddresses = db.define("company-addresses", {
   companyId: {
     type: Sequelize.STRING
   }
+}, {
+    timestamps: false
 });
 
 module.exports = CompanyAddresses;
