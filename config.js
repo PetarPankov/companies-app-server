@@ -1,0 +1,22 @@
+const dotenv = require("dotenv");
+
+dotenv.config();
+
+module.exports = {
+  PORT,
+  DB_HOST,
+  DB_USER,
+  DB_PASSWORD,
+  DB_NAME,
+  X_RAPIDAPI_KEY,
+  X_RAPIDAPI_HOST,
+  TMDB_API_KEY,
+  NYT_API_KEY,
+  CRON_JOB_SCHEDULE,
+  AWS_ACCESS_KEY_ID,
+  AWS_SECRET_ACCESS_KEY,
+  AWS_REGION,
+  BUCKET_NAME,
+  FEED_INTERVAL_MILLISECONDS,
+  MAX_USER_REVIEWS_ITEMS_PER_MOVIE
+} = process.env;
