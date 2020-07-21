@@ -20,7 +20,7 @@ module.exports = app => {
         }
     });
 
-    app.delete("/delete-projects-ap/:id", async (req, res) => {
+    app.delete("/delete-project", async (req, res) => {
         const { id } = req.params;
         const project = await Projects.update({
             isDeleted: true
