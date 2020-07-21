@@ -12,11 +12,11 @@ module.exports = app => {
 
     app.get("/get-employees-by-company-id", async (req, res) => {
         const { id } = req.query;
-        const employee = await Employees.findAll({ where: { companyId: id } });
-        if (!employee.length) {
+        const employees = await Employees.findAll({ where: { companyId: id } });
+        if (!employees.length) {
             res.status(204).send();
         } else {
-            res.send(employee[0]);
+            res.send(employees);
         }
     });
 };
