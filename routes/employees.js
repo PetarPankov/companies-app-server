@@ -19,4 +19,14 @@ module.exports = app => {
             res.send(employees);
         }
     });
+
+    app.get("/get-employee-by-id", async (req, res) => {
+        const { id } = req.query;
+        const employee = await Employees.findAll({ where: { id } });
+        if (!employee.length) {
+            res.status(204).send();
+        } else {
+            res.send(employee[0]);
+        }
+    });
 };
