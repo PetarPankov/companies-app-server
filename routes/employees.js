@@ -11,6 +11,7 @@ module.exports = app => {
     });
 
     app.get("/get-employees-by-company-id", async (req, res) => {
+        const { id } = req.query;
         const employee = await Employees.findAll({ where: { companyId: id } });
         if (!employee.length) {
             res.status(204).send();
