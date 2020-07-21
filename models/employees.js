@@ -21,7 +21,10 @@ const Employees = db.define('employees', {
     type: Sequelize.STRING
   },
   jobTitle: {
-    type: Sequelize.INTEGER
+    type: Sequelize.STRING
+  },
+  jobArea: {
+    type: Sequelize.STRING
   },
   jobType: {
     type: Sequelize.STRING
