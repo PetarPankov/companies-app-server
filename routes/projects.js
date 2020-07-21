@@ -2,7 +2,7 @@ const { Projects } = require('../models');
 
 module.exports = app => {
     app.get("/get-projects", async (req, res) => {
-        const projects = await Projects.findAll({ where: { isDeleted: false } });
+        const projects = await Projects.findAll({ where: { isDeleted: 0 } });
         if (!projects.length) {
             res.end([]);
         } else {
@@ -12,7 +12,7 @@ module.exports = app => {
 
     app.get("/get-projects-by-company-id", async (req, res) => {
         const { id } = req.query;
-        const projects = await Projects.findAll({ where: { companyId: id, isDeleted: false } });
+        const projects = await Projects.findAll({ where: { companyId: id, isDeleted: 0 } });
         if (!projects.length) {
             res.send([]);
         } else {
@@ -23,7 +23,7 @@ module.exports = app => {
     app.delete("/delete-project", async (req, res) => {
         const { id } = req.params;
         const project = await Projects.update({
-            isDeleted: true
+            isDeleted: 1
         }, {
             where: {
                 id
