@@ -21,7 +21,7 @@ module.exports = app => {
     });
 
     app.delete("/delete-project", async (req, res) => {
-        const { id } = req.params;
+        const { id } = req.query;
         const project = await Projects.update({
             isDeleted: 1
         }, {
