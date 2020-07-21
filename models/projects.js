@@ -20,7 +20,10 @@ const Projects = db.define('projects', {
   },
   companyId: {
     type: Sequelize.STRING
-  }  
+  },
+  isDeleted: {
+    type: Sequelize.BOOLEAN
+  } 
 }, {
     timestamps: false
 });
